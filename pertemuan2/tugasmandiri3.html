@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Registrasi Account TCPNS</title>
+</head>
+<body>
+  <h2 style="text-align:center; color:navy;">Form Registrasi Account TCPNS</h2>
+  <p style="text-align:center;">Silahkan isi form di bawah ini dengan baik dan benar.</p>
+
+  <form align="center">
+    <table cellpadding="5" cellspacing="0" border="0" align="center">
+      <tr>
+        <td>Nama:</td>
+        <td><input type="text" name="nama" size="30"></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" name="email" size="30"></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password" size="30"></td>
+      </tr>
+      <tr>
+        <td>Jenis Kelamin:</td>
+        <td>
+          <select name="jk">
+            <option>Pilih Jenis Kelamin</option>
+            <option>Pria</option>
+            <option>Wanita</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Tanggal Lahir:</td>
+        <td>
+          <select name="tgl">
+            <option>Tgl:</option>
+            <!-- Angka 1-31 -->
+            <script>
+              for (let i = 1; i <= 31; i++) {
+                document.write("<option>" + i + "</option>");
+              }
+            </script>
+          </select>
+          <select name="bln">
+            <option>Bulan:</option>
+            <option>Januari</option>
+            <option>Februari</option>
+            <option>Maret</option>
+            <option>April</option>
+            <option>Mei</option>
+            <option>Juni</option>
+            <option>Juli</option>
+            <option>Agustus</option>
+            <option>September</option>
+            <option>Oktober</option>
+            <option>November</option>
+            <option>Desember</option>
+          </select>
+          <select name="thn">
+            <option>Tahun:</option>
+            <!-- Tahun otomatis -->
+            <script>
+              for (let i = 1980; i <= 2025; i++) {
+                document.write("<option>" + i + "</option>");
+              }
+            </script>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Kirim">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

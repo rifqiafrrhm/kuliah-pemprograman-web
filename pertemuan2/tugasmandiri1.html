@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>tugas Mandiri no 1</title>
+</head>
+<body>
+  <h2>Radio Button</h2>
+  <form>
+    <input type="radio" name="warna" value="merah"> Merah<br>
+    <input type="radio" name="warna" value="biru"> Biru<br>
+    <input type="radio" name="warna" value="hijau"> Hijau
+
+    <h2>Drop Down</h2>
+    <select>
+      <option>Indonesia</option>
+      <option>Malaysia</option>
+      <option>Singapura</option>
+    </select>
+
+    <h2>Text Area</h2>
+    <textarea rows="4" cols="40"></textarea>
+  </form>
+
+  <h2>Frame Horizontal</h2>
+  <iframe srcdoc="<p>Frame Kiri</p>" width="45%" height="100"></iframe>
+  <iframe srcdoc="<p>Frame Kanan</p>" width="45%" height="100"></iframe>
+
+  <h2>Frame Vertikal</h2>
+  <iframe srcdoc="<p>Frame Atas</p>" width="95%" height="80"></iframe><br>
+  <iframe srcdoc="<p>Frame Bawah</p>" width="95%" height="80"></iframe>
+
+  <h2>Frame Gabungan H-V</h2>
+  <table border="1" width="100%" height="200">
+    <tr>
+      <td width="30%, *">
+        <iframe srcdoc="<p>Kiri</p>" width="100%" height="200"></iframe>
+      </td>
+      <td>
+        <iframe srcdoc="<p>kanan atas</p>" width="100%" height="100"></iframe><br>
+        <iframe srcdoc="<p>kanan bawah</p>" width="100%" height="100"></iframe>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
