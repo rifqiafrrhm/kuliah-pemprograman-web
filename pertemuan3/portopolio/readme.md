@@ -206,11 +206,11 @@ Selector footer{} menargetkan elemen HTML <footer>.
 ---
 ## Kesimpulan
 ### Struktur HTML
-#### HTML membentuk kerangka halaman portofolio yang rapi dan terorganisir.
-#### Menggunakan elemen semantik (<header>, <section>, <footer>) sehingga lebih mudah dipahami baik oleh pembaca maupun mesin pencari.
-#### Class seperti .container, .profile, dan .section digunakan untuk memisahkan bagian konten agar lebih mudah diatur lewat CSS.
+- HTML membentuk kerangka halaman portofolio yang rapi dan terorganisir.
+- Menggunakan elemen semantik (*<*header*>*, *<*section*>*, *<*footer*>*) sehingga lebih mudah dipahami baik oleh pembaca maupun mesin pencari.
+- Class seperti .container, .profile, dan .section digunakan untuk memisahkan bagian konten agar lebih mudah diatur lewat CSS.
 
 ### Peran CSS
-#### CSS dipakai untuk mempercantik tampilan: mengatur warna, ukuran, jarak, dan posisi elemen.
-#### Selector berbasis elemen (body, header, h2) maupun berbasis class (.container, .profile) memberikan fleksibilitas dalam styling.
-#### Ada juga selector kombinasi (header h1, .profile img, ul li) untuk menargetkan elemen tertentu secara lebih spesifik.
+- CSS dipakai untuk mempercantik tampilan: mengatur warna, ukuran, jarak, dan posisi elemen.
+- Selector berbasis elemen (body, header, h2) maupun berbasis class (.container, .profile) memberikan fleksibilitas dalam styling.
+- Ada juga selector kombinasi (header h1, .profile img, ul li) untuk menargetkan elemen tertentu secara lebih spesifik.
