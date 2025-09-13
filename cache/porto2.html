@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout dengan Header, Nav, Sidebar, Content, Footer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background: rgb(170, 170, 170);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background: rgb(255, 255, 78);
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      min-height: 400px;
+    }
+    aside.kiri {
+      background: rgb(58, 56, 56);
+      color: white;
+      width: 20%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    main {
+      background: rgb(255, 255, 255);
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+    aside.kanan {
+      background: rgb(255, 40, 40);
+      color: white;
+      width: 20%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    footer {
+      background: #6e0505;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RIFQI AFRIZA RAHMAN</h1>
+    <p>Mahasiswa | Web Developer Pemula | Desainer</p>
+  </header>
+
+  <nav>
+    <div>
+        <ul>
+            <li><a href="home.html">Home</a></li> 
+            <li><a href="about.html">About</a></li> 
+            <li><a href="contact.html">Contact</a>"</li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <aside class="kiri">SIDEBAR KIRI</aside>
+    <main>CONTENT / ISI</main>
+    <aside class="kanan">SIDEBAR KANAN</aside>
+  </div>
+
+  <footer>
+    FOOTER
+  </footer>
+</body>
+</html>
