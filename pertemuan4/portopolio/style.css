@@ -9,49 +9,49 @@ body {
     font-family: Arial, sans-serif;
     background-color: #bcdde5;
     margin: 0;
-    padding: 0 20px; /* biar ada spasi kiri kanan */
+    padding: 0 20px; 
     line-height: 1.6;
     color: #333;
     }
 
-    /* Heading utama */
+    
     h1 {
     font-size: 28px;
-    margin-bottom: 10px; /* jarak ke teks di bawah */
+    margin-bottom: 10px; 
     margin-top: 20px;
     text-align: center;
     }
 
-    /* Heading sub (Pendidikan, Keahlian, Proyek) */
+    
     h2 {
     font-size: 20px;
-    margin-top: 25px; /* jarak atas lebih besar */
+    margin-top: 25px; 
     margin-bottom: 10px;
     color: #222;
-    border-bottom: 2px solid #4a9782; /* garis bawah biar rapi */
+    border-bottom: 2px solid #4a9782; 
     padding-bottom: 5px;
     }
 
-    /* Paragraf intro */
+    
     p {
     margin-bottom: 20px;
-    text-align: justify; /* rata kiri kanan */
+    text-align: justify; 
     }
 
-    /* List */
+   
     ul {
-    margin: 0 0 15px 20px; /* jarak bawah antar list, indentasi kiri */
+    margin: 0 0 15px 20px; 
     padding: 0;
     }
 
     li {
-    margin-bottom: 6px; /* jarak antar item */
+    margin-bottom: 6px; 
     }
 
 
     .container {
     display: grid;
-    grid-template-columns: 300px 1fr; /* Sidebar kiri + konten kanan */
+    grid-template-columns: 300px 1fr; 
     max-width: 1000px;
     margin: 20px auto;
     background: #BBDCE5;
@@ -60,7 +60,7 @@ body {
     
     }
 
-    /* Sidebar */
+    
     .sidebar {
     background: #4A9782;
     padding: 20px;
@@ -98,7 +98,6 @@ body {
       padding-bottom: 5px;
     }
 
-    /* Konten utama */
     .main {
       padding: 30px;
     }
@@ -120,7 +119,6 @@ body {
       line-height: 1.6;
     }
 
-    /* Gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -135,10 +133,10 @@ body {
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Responsive */
+  
     @media (max-width: 768px) {
       .container {
-        grid-template-columns: 1fr; /* jadi 1 kolom di HP */
+        grid-template-columns: 1fr; 
       }
       .sidebar {
         text-align: center;
@@ -159,11 +157,11 @@ body {
       margin: 0 15px;
     }
 
-    /* Dropdown menu */
+   
     nav ul li ul.dropdown {
       display: none;
       position: absolute;
-      top: 100%;   /* muncul tepat di bawah menu */
+      top: 100%;   
       left: 0;
       background-color: #4a9782;
       padding: 0;
@@ -191,7 +189,7 @@ body {
       background-color: #36705f;
     }
 
-    /* Tampilkan dropdown saat hover */
+    
     nav ul li:hover ul.dropdown {
       display: block;
     }
@@ -211,14 +209,14 @@ body {
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Reset default margin & padding */
+    
     * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
 
-    /* Body */
+   
     body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -226,7 +224,7 @@ body {
     line-height: 1.6;
     }
 
-    /* Navbar */
+   
     nav {
     background-color: #4a9782;
     padding: 12px 0;
@@ -259,14 +257,14 @@ body {
     color: #f1f1f1;
     }
 
-    /* Heading */
+    
     section h1 {
     text-align: center;
     margin: 20px 0;
     color: #333;
     }
 
-    /* Gallery */
+   
     .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

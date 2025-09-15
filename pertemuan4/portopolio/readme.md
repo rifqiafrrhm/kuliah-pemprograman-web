@@ -1,216 +1,175 @@
-# Analisis Struktur Kode Portofolio (HTML)
+# Analisi HTML
+## link
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+```
+- Menyediakan akses ke ikon siap pakai (phone, email, LinkedIn, GitHub, dll).
+- Membuat tampilan lebih modern karena tidak hanya teks biasa.
 
-Dokumen ini berisi analisis semi-formal mengenai struktur kode HTML portofolio **Rifqi Afriza Rahman**.  
-Setiap tag akan dijelaskan fungsinya secara singkat namun jelas.
+## menu navigasi
+```html
+<nav>
+  <ul>
+    <li><a href="porto.html">Home</a></li>
+    <li>
+      <a href="about.html">About ▾</a>
+      <ul class="dropdown">
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Education</a></li>
+      </ul>
+    </li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="gallery.html">Gallery </a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+```
+- Memberikan navigasi cepat ke halaman lain (Home, About, Projects, Gallery, Contact).
+- Ada fitur dropdown menu pada "About" untuk menampilkan submenu.
 
----
+## ikon kontak
+```html
+<i class="fas fa-phone" style="color:#25d366; font-size:18px; margin-right:8px;"></i> 
+<a href="tel:+628123456789">+628123456789</a>
+```
+- Memberi ikon telepon agar pengguna langsung tahu fungsinya.
+- Style inline dipakai untuk memberi warna hijau (WhatsApp style) & ukuran ikon.
 
-## 1. `<!DOCTYPE html>`
-- Digunakan untuk mendefinisikan bahwa dokumen ini adalah dokumen **HTML5**.
-- Wajib ada di awal agar browser membaca halaman dengan standar HTML5, bukan mode kompatibilitas lama.
+## gallery
+```html
+<section>
+  <h1>Galeri Foto</h1>
+  <div class="gallery">
+    <img src="img1.jpg" alt="Foto 1">
+    ...
+    <img src="img12.jpg" alt="Foto 12">
+  </div>
+</section>
+```
+Menyediakan tampilan galeri foto.
 
----
+- Elemen *<*div class="gallery"*>* biasanya diatur di style.css  kemungkinan berupa grid atau flex agar gambar tampil rapi.
 
-## 2. `<html lang="id">`
-- Elemen utama yang membungkus seluruh isi dokumen.
-- Atribut `lang="id"` menunjukkan bahwa bahasa utama halaman adalah **Bahasa Indonesia**.
-
----
-
-## 3. `<head> ... </head>`
-Bagian ini menyimpan **informasi metadata** dari dokumen, tidak ditampilkan langsung ke pengguna.
-
-### a. `<meta charset="UTF-8">`
-- Menentukan encoding karakter menjadi **UTF-8**.
-- Supaya teks (termasuk huruf Indonesia) dapat ditampilkan dengan benar.
-
-### b. `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-- Membuat halaman lebih **responsif**.
-- Menyesuaikan ukuran tampilan agar sesuai pada layar komputer maupun perangkat mobile.
-
-### c. `<title>Portofolio Rifqi Afriza Rahman</title>`
-- Judul halaman yang muncul di tab browser.
-
-### d. `<link rel="stylesheet" href="style.css">`
-- Menghubungkan dokumen HTML dengan file **CSS eksternal** bernama `style.css`.
-- File CSS ini digunakan untuk mengatur tampilan dan gaya halaman.
-
----
-
-## 4. `<body> ... </body>`
-Bagian utama yang berisi konten yang terlihat oleh pengguna.
-
-### a. `<header> ... </header>`
-- Menampilkan bagian **kepala halaman** (judul dan deskripsi singkat).
-- Berisi:
-  - `<h1>` → judul utama, nama pemilik portofolio, menggunakan heading level 1
-  - `<p>` → deskripsi singkat tentang peran atau profesi.
-
-### b. `<div class="container"> ... </div>`
-- Elemen pembungkus (container) yang mengorganisir isi halaman agar lebih rapi.
-
-#### i. `<div class="profile"> ... </div>`
-- Bagian **profil pribadi**.
-- Elemen di dalamnya:
-  - `<img src="fto.jpg" alt="Foto Profil">` → menampilkan foto profil dengan teks alternatif bila gambar gagal dimuat.
-  - `<p>` → teks pengenalan singkat tentang diri.
-
-#### ii. `<div class="section"> ... </div>` (Pendidikan)
-- Subbagian bertema **pendidikan**.
-- `<h2>` → judul subbagian.
-- `<ul>` dan `<li>` → daftar riwayat pendidikan dalam bentuk list.
-
-#### iii. `<div class="section"> ... </div>` (Keahlian)
-- Subbagian **daftar keahlian**.
-- Menggunakan `<ul>` dan `<li>` untuk menyusun daftar kemampuan teknis.
-
-#### iv. `<div class="section"> ... </div>` (Proyek)
-- Subbagian yang menjelaskan proyek yang pernah dibuat.
-- `<ul>` → list proyek.
-- `<li>` → detail proyek dengan deskripsi singkat.
-
-#### v. `<div class="section"> ... </div>` (Kontak)
-- Subbagian **informasi kontak**.
-- Berisi beberapa `<p>` dengan tautan:
-  - `mailto:` untuk alamat email.
-  - `target="_blank"` pada link LinkedIn & GitHub agar terbuka di tab baru.
-
-### c. `<footer> ... </footer>`
-- Bagian paling bawah halaman.
-- Berisi hak cipta (`&copy;`) dengan tahun dan nama pemilik portofolio.
-
----
-
-
-
+- alt="Foto x"  berguna untuk aksesibilitas & SEO (teks alternatif saat gambar gagal dimuat).
 # Analisis CSS
----
 ## Body
 ```css
 body {
-  font-family: Arial, sans-serif;  /* Menggunakan font Arial, dengan fallback sans-serif */
-  margin: 0;                       /* Menghapus margin default browser */
-  padding: 0;                      /* Menghapus padding default browser */
-  line-height: 1.6;                /* Memberi jarak antar baris agar teks lebih enak dibaca */
-  background: #f5f5f5;           /* Warna latar belakang abu-abu terang */
+  margin: 0;                      /* Reset margin default browser */
+  font-family: Arial, sans-serif; /* Gunakan font Arial, fallback sans-serif */
+  background: #CADCAE;            /* Warna latar belakang hijau pucat */
+  color: #000000;                 /* Warna teks hitam agar kontras */
 }
+```
 body{} artinya selector menargetkan elemen <body> di HTML, yaitu wadah utama dari seluruh isi halaman web.
-```
-
----
-## Header
-```css
-header {
-  background: #2c3e50;  /* Latar belakang biru tua/abu gelap */
-  color: white;           /* Warna teks putih */
-  padding: 20px 0;        /* Ruang atas-bawah 20px, kiri-kanan 0 */
-  text-align: center;     /* Teks rata tengah */
-}
-header{} artinya selector menargetkan elemen <header> di HTML
-
-header h1 {
-  margin: 0;            /* Hilangkan margin default agar lebih rapat */
-}
-header h1{} artinya selector menargetkan elemen <h1> yang ada dalam <header> di HTML
-```
-
----
+``
+``
 ## Container
 ```css
 .container {
-  width: 80%;        /* Lebar kontainer 80% dari layar */
-  margin: auto;      /* Kontainer ditengah secara horizontal */
-  overflow: hidden;  /* Mengatasi elemen float agar tidak keluar */
-  padding: 20px;     /* Ruang dalam kontainer */
-  background: white; /* Latar belakang putih untuk kontras */
+  display: grid;                          /* Ubah layout jadi grid */
+  grid-template-columns: 300px 1fr;       /* Kolom kiri 300px (sidebar), kanan fleksibel */
+  max-width: 1000px;                      /* Lebar maksimal container */
+  margin: 20px auto;                      /* Posisikan di tengah dengan margin vertikal 20px */
+  background: #BBDCE5;                    /* Warna latar biru muda */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);  /* Efek bayangan lembut */
+  border-radius: 12px;                    /* Sudut elemen dibuat melengkung */
 }
+```
 Ada titik (.) di depannya → ini menargetkan class. Jadi CSS ini berlaku untuk semua elemen yang punya class="container".
-```
-
----
-## Heading (h2)
+``
+``
+## sidebar
 ```css
-h2 {
-  color: #2c3e50;                /* Warna teks abu gelap */
-  border-bottom: 2px solid #eee; /* Garis bawah tipis berwarna abu muda */
-  padding-bottom: 5px;             /* Jarak antara teks dan garis */
+.sidebar {
+  background: #4A9782;     /* Warna hijau tua */
+  padding: 20px;           /* Jarak isi ke tepi */
+  text-align: center;      /* Isi di rata tengah */
 }
-h2{} artinya selector menargetkan semua elemen <h2> yang ada dalam <header> di HTML
 ```
-
----
-## Profile
+.sidebar{} artinya selector menargetkan semua elemen HTML yang memiliki atribut class="sidebar".
+``
+``
+## sidebar image
 ```css
-.profile {
-  text-align: center;   /* Isi konten profil rata tengah */
-  margin-bottom: 20px;  /* Jarak bawah 20px */
+.sidebar img {
+  width: 120px;            /* Lebar gambar profil */
+  height: 120px;           /* Tinggi gambar profil */
+  border-radius: 50%;      /* Gambar dibulatkan (lingkaran) */
+  object-fit: cover;       /* Isi gambar dipotong agar pas */
+  margin-bottom: 15px;     /* Jarak bawah 15px dengan elemen lain */
 }
-.profile{} artinya selector menargetkan semua elemen HTML yang memiliki atribut class="profile".
 ```
-
-### Profile Image
+.sidebar img{} artinya selector menargetkan semua elemen HTML yang memiliki atribut class="sidebar".
+``
+``
+## navigasi
 ```css
-.profile img {
-  width: 150px;                   /* Lebar gambar 150px */
-  height: 150px;                  /* Tinggi gambar 150px */
-  border-radius: 100%;            /* Membuat gambar bulat sempurna */
-  border: 4px solid #fff;       /* Garis tepi putih setebal 4px */
-  object-fit: cover;              /* Memotong gambar agar proporsional */
-  object-position: 50% 20%;       /* Fokus gambar di tengah (horizontal) dan agak ke atas (vertikal) */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Efek bayangan lembut */
+nav {
+  background: #4A9782;     /* Warna hijau tua */
+  padding: 10px;           /* Jarak dalam navigasi */
+  text-align: center;      /* Isi link rata tengah */
+  position: sticky;        /* Navigasi menempel saat scroll */
+  top: 0;                  /* Menempel di bagian atas viewport */
 }
-.profile img{} Selector ini menargetkan elemen <img> (gambar) yang berada di dalam elemen dengan class profile.
-```
 
----
-## Section
+nav a {
+  color: white;            /* Warna teks link putih */
+  text-decoration: none;   /* Hilangkan garis bawah default */
+  margin: 0 15px;          /* Jarak antar link */
+}
+```
+nav{} Selector ini menargetkan elemen *<*nav*>* yang berada di dalam elemen HTML
+``
+``
+## dropdown menu
 ```css
-.section {
-  margin-bottom: 20px; /* Jarak bawah antar section sebayak 20px*/
+nav ul li ul.dropdown {
+  display: none;             /* Sembunyikan submenu secara default */
+  position: absolute;        /* Posisi submenu mengambang */
+  top: 100%;                 /* Tampil tepat di bawah menu induk */
+  background-color: #4a9782; /* Warna sama dengan navbar */
 }
-Selector .section{} menargetkan semua elemen HTML yang memiliki class section.
-```
 
----
-## Unordered List (ul) & List Items (li)
+nav ul li:hover ul.dropdown {
+  display: block;            /* Tampilkan submenu saat menu induk di-hover */
+}
+```
+Selector nav ul li.dropdown{} menargetkan semua elemen HTML yang memiliki class="dropdown" pada tag *<*nav*>*
+``
+``
+## gallery
 ```css
-ul {
-  list-style: none; /* Hilangkan bullet default */
-  padding: 0;       /* Hilangkan padding bawaan */
+.gallery {
+  display: grid;                                               /* Gunakan grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid fleksibel: kolom min 200px, sisanya isi otomatis */
+  gap: 15px;                                                   /* Jarak antar gambar */
+  margin-top: 20px;                                            /* Jarak atas dari elemen sebelumnya */
 }
-Selector ul{} menargetkan semua elemen <ul> (unordered list / daftar tidak berurutan) di halaman HTML.
 
-ul li {
-  background: #ecf0f1;   /* Latar belakang abu terang */
-  margin: 5px 0;           /* Jarak antar item daftar */
-  padding: 10px;           /* Ruang dalam item */
-  border-radius: 5px;      /* Sudut membulat */
+.gallery img {
+  width: 100%;                                    /* Gambar isi penuh grid */
+  border-radius: 8px;                             /* Sudut gambar dibulatkan */
+  transition: transform 0.3s;                     /* Animasi saat transform */
 }
-Selector ul li{} berarti menargetkan semua elemen <li> (list item) yang berada di dalam <ul>.
-Jadi aturan ini hanya berlaku untuk item daftar dalam list tak berurutan (<ul>).
+
+.gallery img:hover {
+  transform: scale(1.05);                         /* Gambar membesar saat hover */
+}
 ```
-
----
+Selector .gallery{} menargetkan semua elemen di halaman HTML yang memiliki class="gallery"
+``
+``
 ## Footer
 ```css
 footer {
-  text-align: center;      /* Konten rata tengah */
-  padding: 10px;           /* Ruang dalam atas-bawah */
-  background: #2c3e50;   /* Latar belakang biru tua/abu gelap */
-  color: white;            /* Teks berwarna putih */
-  margin-top: 20px;        /* Jarak atas dari konten sebelumnya */
+  background: #A2B38B;           /* Warna hijau pastel */
+  color: #fff;                   /* Warna teks putih */
+  border-radius: 0 0 10px 10px;  /* Hanya sudut bawah dibulatkan */
 }
-Selector footer{} menargetkan elemen HTML <footer>.
 ```
+Selector footer{} menargetkan elemen HTML *<*footer*>*.
 
----
-## Kesimpulan
-### Struktur HTML
-- HTML membentuk kerangka halaman portofolio yang rapi dan terorganisir.
-- Menggunakan elemen semantik (*<*header*>*, *<*section*>*, *<*footer*>*) sehingga lebih mudah dipahami baik oleh pembaca maupun mesin pencari.
-- Class seperti .container, .profile, dan .section digunakan untuk memisahkan bagian konten agar lebih mudah diatur lewat CSS.
 
-### Peran CSS
-- CSS dipakai untuk mempercantik tampilan: mengatur warna, ukuran, jarak, dan posisi elemen.
-- Selector berbasis elemen (body, header, h2) maupun berbasis class (.container, .profile) memberikan fleksibilitas dalam styling.
-- Ada juga selector kombinasi (header h1, .profile img, ul li) untuk menargetkan elemen tertentu secara lebih spesifik.
+
