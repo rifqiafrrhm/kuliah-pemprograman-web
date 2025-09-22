@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tugas-section">
+            <h2>📐 Tugas 4: Hitungan Bangun Ruang</h2>
+            <div class="geometry-grid">
+                <div class="geometry-item">
+                    <h3>🟫 Kubus</h3>
+                    <div class="input-group">
+                        <label>Sisi (cm):</label>
+                        <input type="number" id="sisiKubus" placeholder="Masukkan sisi" step="0.01">
+                        <button onclick="hitungKubus()">Hitung</button>
+                    </div>
+                    <div id="hasilKubus" class="result" style="display:none;"></div>
+                </div>
+
+                <div class="geometry-item">
+                    <h3>📦 Balok</h3>
+                    <div class="input-group">
+                        <label>Panjang (cm):</label>
+                        <input type="number" id="panjangBalok" placeholder="Panjang" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label>Lebar (cm):</label>
+                        <input type="number" id="lebarBalok" placeholder="Lebar" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label>Tinggi (cm):</label>
+                        <input type="number" id="tinggiBalok" placeholder="Tinggi" step="0.01">
+                        <button onclick="hitungBalok()">Hitung</button>
+                    </div>
+                    <div id="hasilBalok" class="result" style="display:none;"></div>
+                </div>
+
+                <div class="geometry-item">
+                    <h3>🥫 Tabung</h3>
+                    <div class="input-group">
+                        <label>Jari-jari (cm):</label>
+                        <input type="number" id="jariJariTabung" placeholder="Jari-jari" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label>Tinggi (cm):</label>
+                        <input type="number" id="tinggiTabung" placeholder="Tinggi" step="0.01">
+                        <button onclick="hitungTabung()">Hitung</button>
+                    </div>
+                    <div id="hasilTabung" class="result" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function hitungKubus() {
+            const sisi = parseFloat(document.getElementById('sisiKubus').value);
+            const hasil = document.getElementById('hasilKubus');
+            
+            if (isNaN(sisi) || sisi <= 0) {
+                hasil.innerHTML = 'Masukkan nilai sisi yang valid!';
+                hasil.style.display = 'block';
+                return;
+            }
+            
+            const volume = sisi * sisi * sisi;
+            const luasPermukaan = 6 * sisi * sisi;
+            
+            hasil.innerHTML = `
+                <h4>Hasil Perhitungan Kubus</h4>
+                <strong>Sisi:</strong> ${sisi} cm<br>
+                <strong>Volume:</strong> ${volume.toFixed(2)} cm³<br>
+                <strong>Luas Permukaan:</strong> ${luasPermukaan.toFixed(2)} cm²
+            `;
+            hasil.style.display = 'block';
+        }
+
+        function hitungBalok() {
+            const panjang = parseFloat(document.getElementById('panjangBalok').value);
+            const lebar = parseFloat(document.getElementById('lebarBalok').value);
+            const tinggi = parseFloat(document.getElementById('tinggiBalok').value);
+            const hasil = document.getElementById('hasilBalok');
+            
+            if (isNaN(panjang) || isNaN(lebar) || isNaN(tinggi) || 
+                panjang <= 0 || lebar <= 0 || tinggi <= 0) {
+                hasil.innerHTML = 'Masukkan semua nilai dengan benar!';
+                hasil.style.display = 'block';
+                return;
+            }
+            
+            const volume = panjang * lebar * tinggi;
+            const luasPermukaan = 2 * (panjang * lebar + panjang * tinggi + lebar * tinggi);
+            
+            hasil.innerHTML = `
+                <h4>Hasil Perhitungan Balok</h4>
+                <strong>Panjang:</strong> ${panjang} cm<br>
+                <strong>Lebar:</strong> ${lebar} cm<br>
+                <strong>Tinggi:</strong> ${tinggi} cm<br>
+                <strong>Volume:</strong> ${volume.toFixed(2)} cm³<br>
+                <strong>Luas Permukaan:</strong> ${luasPermukaan.toFixed(2)} cm²
+            `;
+            hasil.style.display = 'block';
+        }
+
+        function hitungTabung() {
+            const r = parseFloat(document.getElementById('jariJariTabung').value);
+            const t = parseFloat(document.getElementById('tinggiTabung').value);
+            const hasil = document.getElementById('hasilTabung');
+            
+            if (isNaN(r) || isNaN(t) || r <= 0 || t <= 0) {
+                hasil.innerHTML = 'Masukkan semua nilai dengan benar!';
+                hasil.style.display = 'block';
+                return;
+            }
+            
+            const volume = Math.PI * r * r * t;
+            const luasPermukaan = 2 * Math.PI * r * (r + t);
+            
+            hasil.innerHTML = `
+                <h4>Hasil Perhitungan Tabung</h4>
+                <strong>Jari-jari:</strong> ${r} cm<br>
+                <strong>Tinggi:</strong> ${t} cm<br>
+                <strong>Volume:</strong> ${volume.toFixed(2)} cm³<br>
+                <strong>Luas Permukaan:</strong> ${luasPermukaan.toFixed(2)} cm²
+            `;
+            hasil.style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('stringInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') konversiTipeData();
+            });
+            
+            document.getElementById('arrayInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') tambahArray();
+            });
+        });
+    </script>
+</body>
+</html>

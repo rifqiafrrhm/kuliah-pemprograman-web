@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div class="container">
+        <div class="tugas-section">
+            <h2>📝 Tugas 1: Konversi Tipe Data</h2>
+            <div class="input-group">
+                <label>Input String:</label>
+                <input type="text" id="stringInput" placeholder="Masukkan string angka" value="123.45">
+                <button onclick="konversiTipeData()">Konversi</button>
+            </div>
+            <div id="hasilKonversi" class="result" style="display:none;"></div>
+        </div>
+    </div>
+    <script language="javascript">
+        function konversiTipeData() {
+            const input = document.getElementById('stringInput').value;
+            const hasil = document.getElementById('hasilKonversi');
+            
+            let output = `<h4>Hasil Konversi dari: "${input}"</h4>`;
+            
+            const intValue = parseInt(input);
+            output += `<strong>parseInt():</strong> ${intValue} (tipe: ${typeof intValue})<br>`;
+            
+            const floatValue = parseFloat(input);
+            output += `<strong>parseFloat():</strong> ${floatValue} (tipe: ${typeof floatValue})<br>`;
+            
+            const numberValue = Number(input);
+            output += `<strong>Number():</strong> ${numberValue} (tipe: ${typeof numberValue})<br>`;
+            
+            const stringValue = String(input);
+            output += `<strong>String():</strong> "${stringValue}" (tipe: ${typeof stringValue})<br>`;
+            
+            const booleanValue = Boolean(input);
+            output += `<strong>Boolean():</strong> ${booleanValue} (tipe: ${typeof booleanValue})<br>`;
+            
+            output += `<strong>isNaN():</strong> ${isNaN(input)} (apakah bukan angka?)<br>`;
+            
+            hasil.innerHTML = output;
+            hasil.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

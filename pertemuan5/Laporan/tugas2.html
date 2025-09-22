@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tugas-section">
+            <h2>📊 Tugas 2: Tipe Data Array</h2>
+            <div class="input-group">
+                <label>Tambah Elemen:</label>
+                <input type="text" id="arrayInput" placeholder="Masukkan nilai">
+                <button onclick="tambahArray()">Tambah</button>
+                <button onclick="clearArray()">Clear Array</button>
+            </div>
+            <div class="input-group">
+                <button onclick="sortArray()">Sort Array</button>
+                <button onclick="reverseArray()">Reverse Array</button>
+                <button onclick="hitungStatistik()">Hitung Statistik</button>
+            </div>
+            <div id="arrayDisplay" class="array-display">Array: []</div>
+            <div id="hasilArray" class="result" style="display:none;"></div>
+        </div>
+    </div>
+    <script language="javascript">
+        let myArray = [];
+
+        function tambahArray() {
+            const input = document.getElementById('arrayInput').value;
+            if (input.trim() !== '') {
+                const value = isNaN(input) ? input : parseFloat(input);
+                myArray.push(value);
+                document.getElementById('arrayInput').value = '';
+                updateArrayDisplay();
+            }
+        }
+
+        function clearArray() {
+            myArray = [];
+            updateArrayDisplay();
+            document.getElementById('hasilArray').style.display = 'none';
+        }
+
+        function sortArray() {
+            myArray.sort((a, b) => {
+                if (typeof a === 'number' && typeof b === 'number') {
+                    return a - b;
+                }
+                return String(a).localeCompare(String(b));
+            });
+            updateArrayDisplay();
+        }
+
+        function reverseArray() {
+            myArray.reverse();
+            updateArrayDisplay();
+        }
+
+        function updateArrayDisplay() {
+            document.getElementById('arrayDisplay').innerHTML = 
+                `Array: [${myArray.map(item => typeof item === 'string' ? `"${item}"` : item).join(', ')}]<br>
+                Panjang Array: ${myArray.length}`;
+        }
+
+        function hitungStatistik() {
+            const hasil = document.getElementById('hasilArray');
+            const numbers = myArray.filter(item => typeof item === 'number');
+            
+            if (numbers.length === 0) {
+                hasil.innerHTML = '<h4>Statistik Array</h4>Tidak ada angka dalam array untuk dihitung statistik.';
+            } else {
+                const sum = numbers.reduce((a, b) => a + b, 0);
+                const avg = sum / numbers.length;
+                const min = Math.min(...numbers);
+                const max = Math.max(...numbers);
+                
+                hasil.innerHTML = `
+                    <h4>Statistik Array (Angka)</h4>
+                    <strong>Jumlah:</strong> ${sum}<br>
+                    <strong>Rata-rata:</strong> ${avg.toFixed(2)}<br>
+                    <strong>Minimum:</strong> ${min}<br>
+                    <strong>Maximum:</strong> ${max}<br>
+                    <strong>Total Angka:</strong> ${numbers.length} dari ${myArray.length} elemen
+                `;
+            }
+            hasil.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
