@@ -63,6 +63,7 @@
   
   <!-- Main Content -->
   <div class="main">
+    <p id="clock" style="font-weight:bold;"></p>
     <h1>MY PORTOFOLIO</h1>
     <p>Halo! Saya adalah mahasiswa yang sedang belajar pemrograman dan desain web. 
         Saya suka membuat proyek kecil untuk melatih keterampilan saya.</p>
@@ -90,5 +91,17 @@
             <li><b>Website Portfolio</b> – Membuat website sederhana untuk menampilkan profil pribadi</li>
           </ul>
         </div>
+<script>
+  window.onload = function() {
+    alert("Selamat datang di Portfolio Rifqi Afriza Rahman!");
+  };
+
+  function updateClock() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    document.getElementById("clock").textContent = timeString;
+  }
+  setInterval(updateClock, 1000);
+</script>
 </body>
 </html>
