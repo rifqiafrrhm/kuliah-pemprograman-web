@@ -30,6 +30,7 @@
       echo "<div class='note'>
               <b>{$row['tanggal']}</b><br>
               {$row['isi']}<br>
+              <a href='edit.php?id={$row['id']}'>Edit</a> |
               <a href='hapus.php?id={$row['id']}'>Hapus</a>
             </div>";
     }
