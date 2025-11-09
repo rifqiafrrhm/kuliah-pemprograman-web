@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang - Bras Telur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    
+  <nav class="bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 flex justify-between items-center shadow-lg">
+    <div class="text-2xl font-bold tracking-wide">Bras Telur Website</div>
+    <ul class="flex space-x-8 text-lg">
+      <li><a href="/index" class="hover:text-gray-200">Beranda</a></li>
+      <li><a href="/About" class="hover:text-gray-200">Tentang</a></li>
+      <li><a href="/Produk" class="hover:text-gray-200">Produk</a></li>
+    </ul>
+  </nav>
+
+    <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Tentang Kami</h1>
+            <p class="text-xl text-green-100">Menyediakan beras berkualitas untuk keluarga Indonesia sejak 2010</p>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                    <span class="font-semibold text-green-600">Toko Beras</span> adalah usaha keluarga yang telah berdiri sejak tahun 2010. 
+                    Kami memulai dari toko kecil di Makassar dengan visi sederhana: menyediakan beras berkualitas tinggi dengan harga terjangkau 
+                    untuk masyarakat.
+                </p>
+                <p>
+                    Selama lebih dari satu dekade, kami telah melayani ribuan pelanggan setia dan terus berkembang menjadi 
+                    salah satu distributor beras terpercaya di Sulawesi Selatan. Kepercayaan pelanggan adalah aset terbesar kami.
+                </p>
+                <p>
+                    Kami bekerja sama langsung dengan petani lokal untuk memastikan kualitas beras yang kami jual. 
+                    Setiap karung beras melalui proses seleksi ketat untuk memastikan hanya yang terbaik sampai ke tangan Anda.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Visi</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Menjadi distributor beras terpercaya dan terdepan di Indonesia yang memberikan 
+                        produk berkualitas tinggi dengan pelayanan terbaik untuk kesejahteraan masyarakat.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Misi</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Menyediakan beras berkualitas dengan harga terjangkau</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Memberikan pelayanan terbaik kepada pelanggan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Terus berinovasi dalam distribusi dan layanan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Nilai-Nilai Kami</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
+                <div class="text-5xl mb-4">🌟</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Kualitas</h3>
+                <p class="text-gray-600 text-sm">
+                    Hanya beras terbaik untuk pelanggan
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
+                <div class="text-5xl mb-4">🤝</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Kepercayaan</h3>
+                <p class="text-gray-600 text-sm">
+                    Membangun hubungan jangka panjang
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
+                <div class="text-5xl mb-4">💯</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Integritas</h3>
+                <p class="text-gray-600 text-sm">
+                    Jujur dalam setiap transaksi
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
+                <div class="text-5xl mb-4">❤️</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Pelayanan</h3>
+                <p class="text-gray-600 text-sm">
+                    Kepuasan pelanggan prioritas utama
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-green-600 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                
+                <div>
+                    <div class="text-5xl font-bold mb-2">15+</div>
+                    <div class="text-green-100">Tahun Pengalaman</div>
+                </div>
+
+                <div>
+                    <div class="text-5xl font-bold mb-2">10K+</div>
+                    <div class="text-green-100">Pelanggan Setia</div>
+                </div>
+
+                <div>
+                    <div class="text-5xl font-bold mb-2">50+</div>
+                    <div class="text-green-100">Mitra Petani</div>
+                </div>
+
+                <div>
+                    <div class="text-5xl font-bold mb-2">20+</div>
+                    <div class="text-green-100">Jenis Beras</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-16 text-center">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-lg shadow-lg p-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Ingin Tahu Lebih Lanjut?</h2>
+            <p class="text-gray-700 mb-8">
+                Hubungi kami untuk informasi produk dan penawaran khusus
+            </p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="/Produk" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300">
+                    Lihat Produk
+                </a>
+                <a href="https://wa.me/6288242619686" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold border-2 border-green-600 hover:bg-green-50 transition duration-300">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Toko Beras</h3>
+                    <p class="text-gray-400">
+                        Menyediakan beras berkualitas untuk keluarga Indonesia sejak 2010
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Menu</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/index" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="/About" class="text-gray-400 hover:text-white transition">Tentang</a></li>
+                        <li><a href="/Produk" class="text-gray-400 hover:text-white transition">Produk</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                <h3 class="text-xl font-bold mb-4">Kontak</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>
+                    📍 
+                    <a href="https://maps.app.goo.gl/2thewox6owKrtFRMA?g_st=ac" 
+                        target="_blank" 
+                        class="hover:underline text-blue-400">
+                        JL. TAMALATE 1 BLOK 15 NO.3, BONTO MAKKIO, MAKASSAR
+                    </a>
+                    </li>
+                    <li>
+                    📞 
+                    <a href="https://wa.me/6288242619686" 
+                    target="_blank" 
+                    class="hover:underline text-green-500">
+                    0882-4261-9686
+                    </a>
+                    </li>
+                    <li>✉️ info@tokoberas.com</li>
+                </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Bras Telur. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
